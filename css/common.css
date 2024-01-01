@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap");
+
+*, table {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-break: keep-all;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.43;
+    letter-spacing: -0.35px;
+    color: #111;
+}
+body,
+html {
+    background-color: #f7f9fb;
+}
+
+
+
+/* Common: section S */
+.section_wrap {
+    position: absolute;
+    top: 90px;
+    left: 220px;
+    width: calc(100% - 220px);
+}
+.container-section {
+    padding-right: 40px;
+}
+.title-section {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.45;
+    letter-spacing: -0.55px;
+}
+/* Common: section E */
+
+
+
+/* Common: date filter S */
+.date_filter-wrap {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.date_filter-wrap.table-inner {
+    margin-bottom: 20px;
+}
+.date_filter-wrap > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title-date {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* date_filter-option */
+.date_filter-option select {
+    -o-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 90px;
+    height: 42px;
+    border-radius: 24px;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: bold;
+    background-image: url(../images/common/icon_common-select.svg);
+    background-position: calc(100% - 10px) center;
+    background-repeat: no-repeat;
+    border: solid 1px #e4e9f0;
+    background-color: #f7f9fb;
+    margin: 0 20px;
+}
+/* .date_filter-option select:focus option:first-of-type {
+    display: none;
+} */
+.date_filter-btn {
+    margin-right: 20px;
+    display: flex;
+}
+.date_filter-btn button {
+    padding: 11px 0px;
+    display: block;
+    width: 80px;
+    border-radius: 24px;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.date_filter-btn button.active {
+    color: #fff;
+    background-color: #111;
+}
+
+
+/* date_filter-input */
+.date_filter-date {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.21;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    white-space: nowrap;
+}
+.date_filter-wrap.table-inner .date_filter-date input[type="date"] {
+    background-color: #f7f9fb;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+.date_filter-date input[type="date"] {
+    text-align: center;
+    width: 148px;
+    height: 42px;
+    border-radius: 24px;
+    border: solid 1px #e4e9f0;
+    background-color: transparent;
+    padding: 0 15px;
+}
+.date_filter-date span {
+    margin: 0 8px;
+}
+.date_filter-option .comment {
+    font-size: 14px;
+    position: relative;
+}
+.date_filter-option .comment::before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #111;
+}
+/* Common: date filter E */
+
+
+
+/* Common: white_box S */
+.white_box {
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 20px 20px 0 rgba(0, 65, 162, 0.03);
+    background-color: #fff;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.title-box {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.44;
+    letter-spacing: -0.45px;
+}
+.chart {
+    width: 100%;
+    height: 194px;
+    opacity: 0.3;
+    background-color: #111;
+}
+.white_box-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.box_btn {
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.box_btn img {
+    margin-right: 6px;
+}
+/* Common: white_box E */
+
+
+
+/* Common: table S */
+   
+/* .table-wrap {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.table-wrap::-webkit-scrollbar {
+    display: none;
+} */
+.table-wrap {
+    overflow: scroll;
+    max-height: auto;
+}
+.table-wrap thead {
+    position: sticky;
+    z-index: 1;
+}
+.table-wrap thead tr {
+    background-color: #f7f9fb;
+    position: sticky;
+}
+.table-wrap thead tr th {
+    width: 140px;
+}
+.table-wrap thead tr:first-child {
+    top: 0px;
+}
+.table-wrap thead tr:last-child {
+    top: 61px;
+}
+.table-wrap thead tr:last-child th {
+    padding: 16px 0;
+}
+.table-wrap thead tr th:first-of-type,
+.table-wrap tbody tr th:first-of-type {
+    position: sticky;
+    left: 0;
+}
+.table-wrap thead tr th:first-of-type {
+    background-color: #f7f9fb;
+}
+.table-wrap tbody tr th:first-of-type {
+    background-color: #fff;
+}
+.table-wrap.thead-1 thead tr:only-child{
+    top: 0;
+}
+
+
+/* table */
+table {
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+}
+thead {
+    background-color: #f7f9fb;
+}
+thead tr {
+    font-size: 14px;
+    font-weight: bold;
+}
+thead tr:first-child {
+    border-bottom: 1px solid #eaeef3;
+}
+thead tr:only-child {
+    border-bottom: 0;
+}
+thead tr th {
+    padding: 22px 0;
+}
+thead tr:first-child th:first-of-type {
+    border-top-left-radius: 8px;
+}
+thead tr:first-child th:last-of-type {
+    border-top-right-radius: 8px;
+}
+thead tr:last-child th:first-of-type {
+    border-bottom-left-radius: 8px;
+}
+thead tr:last-child th:last-of-type {
+    border-bottom-right-radius: 8px;
+}
+tbody tr th,
+tbody tr td {
+    padding: 22px 0;
+}
+tbody tr th {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.21;
+}
+thead tr:first-child th:first-of-type {
+    width: 140px !important;
+} 
+thead tr th button {
+    padding: 7px 19px 8px;
+    border-radius: 22px;
+    border: solid 1px #e4e9f0;
+    background-color: #f7f9fb;
+    font-size: 12px;
+    line-height: 1.42;
+    letter-spacing: -0.3px;
+    font-weight: 500;
+}
+tbody tr td {
+    font-size: 14px;
+}
+/* Common:table E */
+
+
+
+
+/* Common: input,select S */
+input:focus,
+select:focus {
+    outline: none;
+}
+select::-ms-expand { 
+	display: none;
+}
+.input_common_style {
+    border-radius: 28px;
+    border: solid 1px #e4e9f0;
+    padding: 0 30px;
+    font-size: 14px;
+    background-color: #fff;
+}
+.input_common_style::placeholder {
+    color: #e4e9f0;
+}
+.input_common_style:focus {
+    border: solid 1px #111;
+}
+.input_common_style.input_error:focus {
+    border: solid 1px #f73287;
+}
+.input_common_style.input_error {
+    border: solid 1px #f73287;
+    background-color: #fff1f7;
+}
+.input_common_style.input_disabled:focus {
+    border: solid 1px #e4e9f0;
+}
+.input_common_style.input_disabled {
+    border: solid 1px #e4e9f0;
+    background-color: #f1f4f8;
+    color: #bac0c6;
+}
+
+
+
+/* input[type="checkbox"] */
+input[type="checkbox"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+input[type="checkbox"] + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+input[type="checkbox"] + label:before,
+input[type="checkbox"]:checked + label:after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 5px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+}
+input[type="checkbox"] + label:before {
+    background: #fff;
+    border: 2px solid #f7f9fb;
+    box-sizing: border-box;
+}
+input[type="checkbox"]:checked + label:after {
+    background-color: #000;
+    background-image: url(../images/common/icon_common-checkbox.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* Common: input,select E */
+
+
+
+/* Common: btn style */
+.btn_black {
+    padding: 14px 0;
+    border-radius: 27px;
+    background-color: #111;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+    text-align: center;
+    color: #fff;
+}

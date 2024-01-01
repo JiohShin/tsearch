@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T-Search: 마이페이지</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/myPage.css" />
+    <link rel="stylesheet" href="./css/commonRes.css" />
+    <link rel="stylesheet" href="./css/headerRes.css" />
+    <script src="./js/module.js" defer></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- header: menu -->
+      <header>
+        <div class="container-header">
+          <div class="header-title">
+            <h1><a href="./">T-Search</a></h1>
+          </div>
+
+          <div class="container-nav">
+            <nav class="nav_wrap">
+              <p>검색</p>
+              <ul>
+                <li>
+                  <a href="./analysis.html" title="키워드분석"
+                    ><span></span>키워드분석</a
+                  >
+                </li>
+                <li>
+                  <a href="./manage.html" title="키워드관리"
+                    ><span></span>키워드관리</a
+                  >
+                </li>
+                <li>
+                  <a href="./group.html" title="그룹관리"
+                    ><span></span>그룹관리</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- mobile gnb: when the device type is mobile, it is shown on the bottom of header -->
+          <div class="header_gnb-wrap mobile">
+            <ul class="header_gnb-text">
+              <li><a href="./member.html">멤버쉽안내</a></li>
+              <li><a href="#">초대하기</a></li>
+            </ul>
+
+            <ul class="header_gnb-icon">
+              <li>
+                <a href="./analysis.html" title="홈"
+                  ><img src="./images/common/icon_gnb-home.svg" alt="홈"
+                /></a>
+              </li>
+              <li>
+                <a href="./my.html" title="마이페이지"
+                  ><img
+                    src="./images/common/icon_gnb-mypage.svg"
+                    alt="마이페이지"
+                /></a>
+              </li>
+              <li>
+                <a href="./login.html" title="로그아웃"
+                  ><img
+                    src="./images/common/icon_gnb-logout.svg"
+                    alt="로그아웃"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- header: search & gnb -->
+      <div class="header_search-gnb">
+        <form action="">
+          <div class="search_form-wrap">
+            <div class="icon_ham">
+              <span class="menu_btn"></span>
+              <h2 class="mobile-title">마이페이지</h2>
+            </div>
+            <div class="icon_search"><span></span></div>
+            <input
+              type="search"
+              placeholder="최대 20개까지 복수키워드 분석이 가능합니다. 키워드 입력 후 ‘Tab’ 키를 누르시면 구분됩니다." />
+          </div>
+        </form>
+
+        <div class="header_gnb-wrap">
+          <ul class="header_gnb-text">
+            <li><a href="./member.html">멤버쉽안내</a></li>
+            <li><a href="#">초대하기</a></li>
+          </ul>
+
+          <ul class="header_gnb-icon">
+            <li>
+              <a href="./analysis.html" title="홈"
+                ><img src="./images/common/icon_gnb-home.svg" alt="홈"
+              /></a>
+            </li>
+            <li>
+              <a href="./my.html" title="마이페이지"
+                ><img
+                  src="./images/common/icon_gnb-mypage.svg"
+                  alt="마이페이지"
+              /></a>
+            </li>
+            <li>
+              <a href="./login.html" title="로그아웃"
+                ><img src="./images/common/icon_gnb-logout.svg" alt="로그아웃"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- section: my page -->
+      <section class="section_wrap">
+        <div class="container-section mypage">
+          <h2 class="title-section">마이페이지</h2>
+
+          <!-- tab: tab button area -->
+          <!-- active: The first one is default -->
+          <ul class="mypage_tab_btn">
+            <li class="active" data-tab-target="#accountInfo">계정정보</li>
+            <li data-tab-target="#memberInfo">멤버쉽</li>
+            <li data-tab-target="#accountManage">계정관리</li>
+          </ul>
+
+          <div class="white_box">
+            <!-- tab: contents area -->
+            <!-- active: The first one is default -->
+            <div class="container-white_box">
+              <!-- table: accountInfo -->
+              <table class="mypage active" id="accountInfo" data-tab-content>
+                <tbody>
+                  <tr>
+                    <th>이름</th>
+                    <td>팅서치</td>
+                  </tr>
+                  <tr>
+                    <th>이메일</th>
+                    <td>ceo@adting.net</td>
+                  </tr>
+                  <tr>
+                    <th>가입일</th>
+                    <td>2022년 4월 1일</td>
+                  </tr>
+                  <tr class="flex-col">
+                    <th>알림</th>
+
+                    <!-- active: The class name of active is default. When the button is clicked, it is removed. -->
+                    <td class="promotion">
+                      <button class="promotion_alarm active"></button>
+                      <span class="comment"
+                        >마케팅, 이벤트 등 프로모션 알림 메일을
+                        수신합니다.</span
+                      >
+                    </td>
+                  </tr>
+                  <tr class="flex-col">
+                    <th>휴대폰인증</th>
+                    <td>
+                      <div class="phone_auth">
+                        <input
+                          type="text"
+                          placeholder="휴대폰 번호 입력('-' 제외)"
+                          class="input_common_style" />
+                        <button type="submit" class="phone_auth_btn">
+                          인증하기
+                        </button>
+                      </div>
+                      <span class="comment"
+                        >휴대폰 인증을 완료하시면, 멤버쉽 14일 무료 체험 혜택이
+                        주어집니다.</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- table: memberInfo -->
+              <table
+                class="mypage mypage-member"
+                id="memberInfo"
+                data-tab-content>
+                <tbody>
+                  <tr class="flex-col">
+                    <th>멤버쉽플랜</th>
+                    <td class="member_link">
+                      <span>무료회원</span>
+                      <a href="#">플랜구독<span></span></a>
+                    </td>
+                  </tr>
+                  <tr class="flex-col">
+                    <th>계정수</th>
+                    <td class="member_link">
+                      <span>5개</span>
+                      <a href="#">관리<span></span></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>시작일</th>
+                    <td>2022년 4월 1일</td>
+                  </tr>
+                  <tr>
+                    <th>만료일</th>
+                    <td>자동연장</td>
+                  </tr>
+                  <tr class="flex-col">
+                    <th>결제</th>
+                    <td class="member_link">
+                      <span>BC 3242-XXXX-XXXX-2453</span>
+                      <a href="#">카드관리<span></span></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- table: accountManage -->
+              <table
+                class="mypage mypage-manage"
+                id="accountManage"
+                data-tab-content>
+                <thead>
+                  <tr class="mypage-manage_comment">
+                    <th colspan="3">
+                      <em>5개</em>의 구독계정을 사용중이십니다.<br />
+                      기기를 변경하실 경우, 해당계정을 삭제 후 새로운 기기에서
+                      로그인 하여 주세요.
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>아이디</th>
+                    <th>기기</th>
+                    <th>관리</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Ting01</td>
+                    <td>LAPTOP-KR0L9USD</td>
+                    <td><button class="delete_btn"></button></td>
+                  </tr>
+                  <tr>
+                    <td>Ting02</td>
+                    <td>LAPTOP-KR0L9USD</td>
+                    <td><button class="delete_btn"></button></td>
+                  </tr>
+                  <tr>
+                    <td>Ting03</td>
+                    <td>LAPTOP-KR0L9USD</td>
+                    <td><button class="delete_btn"></button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      // tab function
+      const tabs = document.querySelectorAll("[data-tab-target]");
+      const tabContents = document.querySelectorAll("[data-tab-content]");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const target = document.querySelector(tab.dataset.tabTarget);
+          // console.log(tab.dataset.tabTarget);
+
+          tabContents.forEach((tabContent) => {
+            tabContent.classList.remove("active");
+          });
+          tabs.forEach((tab) => {
+            tab.classList.remove("active");
+          });
+          tab.classList.add("active");
+          target.classList.add("active");
+        });
+      });
+
+      // promotion alarm
+      const alarm = document.querySelector(".promotion_alarm");
+
+      alarm.addEventListener("click", function () {
+        if (this.classList.contains("active") == false) {
+          this.classList.add("active");
+        } else {
+          this.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+/* keyAnalysis S */
+/* table: compete */
+.table_compete tbody tr td {
+    text-align: right;
+    padding: 22px 10px;
+}
+.table_compete thead tr:first-child th {
+    width: 300px;
+}
+
+
+
+/* table: population */
+.table_population {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.table_population td.value_max {
+    color: #f73287;
+}
+.table_population td.value_min {
+    color: #d3d8de;
+} 
+.table_population .table-wrap:first-child {
+    width: 40%;
+    margin-right: 20px;
+}
+.table_population .table-wrap:last-child {
+    width: 60%;
+}
+.table_population-sex thead tr:first-child th:last-of-type {
+    width: 250px;
+}
+.table_population-total thead tr:first-child th:last-of-type {
+    width: 500px;
+}
+/* keyAnalysis E */
+
+
+
+/* Laptop small S */
+@media all and (max-width: 1440px) {
+    /* keyAnalysis: common */
+    .white_box-top {
+        align-items: baseline;
+        flex-direction: column;
+    }
+    .manage_btn {
+        margin-top: 10px;
+        display: block;
+        width: 100%;
+        padding: 11px 0;
+        border-radius: 21px;
+        background-color: #111;
+        color: #fff;
+    }
+}
+/* Laptop E */
+
+/* Tablet and Mobile S */
+@media all and (max-width: 1023px){
+    /* table: population */
+    .table_population {
+        flex-direction: column;
+    }
+    .table_population .table-wrap:first-child,
+    .table_population .table-wrap:last-child {
+        width: 100%;
+    }
+    .table_population .table-wrap:first-child {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+/* Tablet and Mobile E */
+
+/* Tablet S */
+@media all and (min-width: 768px) and (max-width: 1023px){
+}
+/* Tablet E */
+
+/* Mobile S */
+@media all and (max-width: 767px){
+}
+/* Mobile E */

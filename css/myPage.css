@@ -1,0 +1,368 @@
+/* myPage S */
+/* section: my page */
+
+
+
+/* tab: tab button area */
+.mypage_tab_btn {
+    display: flex;
+    margin: 20px 0;
+}
+.mypage_tab_btn li {
+    cursor: pointer;
+    width: 110px;
+    display: block;
+    padding: 11px 0;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.mypage_tab_btn li.active {
+    background-color: #111;
+    color: #fff;
+}
+
+
+
+/* tab: contents area */
+[data-tab-content] {
+    display: none;
+}
+.active[data-tab-content] {
+    display: table;
+}
+.container-section.mypage {
+    padding-right: 0;
+    margin: 0 auto;
+    width: 840px;
+}
+.mypage {
+    text-align: left;
+}
+.mypage tbody tr:first-child th:only-of-type {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.mypage tbody tr:last-child th:only-of-type {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.mypage tbody th,
+.mypage tbody td {
+    padding: 22px 30px;
+} 
+.mypage tbody th {
+    vertical-align: middle;
+    background-color: #f7f9fb;
+    width: 200px;
+}
+.mypage .comment {
+    font-size: 12px;
+    line-height: 1.42;
+    letter-spacing: -0.3px;
+    color: #bac0c6;
+}
+
+
+
+/* table: accountInfo */
+.phone_auth {
+    margin-bottom: 8px;
+}
+.phone_auth input {
+    height: 42px;
+    margin-right: 8px;
+}
+.phone_auth_btn {
+    height: 42px;
+    padding: 11px 25px;
+    border-radius: 24px;
+    border: solid 1px #111;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.promotion {
+    display: flex;
+    align-items: center;
+}
+.promotion_alarm {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    border-radius: 3px;
+    background-color: #d6dce2;
+    margin-right: 20px;
+    position: relative;
+}
+.promotion_alarm::before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-color: #d6dce2;
+    border-radius: 50%;
+    transition: transform .5s;
+}
+.promotion_alarm.active {
+    background-color: #111;
+}
+.promotion_alarm.active::before {
+    background-color: #111;
+    transform: translateX(16px) translateY(-50%);
+}
+
+
+
+/* table: memberInfo */
+.mypage-member .member_link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.member_link a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #bac0c6;
+    display: flex;
+    align-items: center;
+}
+.member_link a span {
+    margin-left: 2px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url(../images/common/icon_myPage-arrow.svg);
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+
+
+/* table: accountManage */
+.mypage-manage {
+    text-align: center;
+}
+.mypage-manage thead tr:first-child {
+    border: 0;
+}
+.mypage-manage thead tr:last-child th:first-of-type {
+    border-top-left-radius: 8px;
+}
+.mypage-manage thead tr:last-child th:last-of-type {
+    border-top-right-radius: 8px;
+}
+.mypage-manage_comment {
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.mypage-manage_comment em {
+    color: #f73287;
+}
+.mypage-manage .delete_btn {
+    border-radius: 22px;
+    border: solid 1px #e4e9f0;
+    background-color: #fff;
+    padding: 8px 19px;
+}
+.mypage-manage .delete_btn::before {
+    display: block;
+    content: '삭제';
+    font-size: 12px;
+    line-height: 1.42;
+    letter-spacing: -0.3px;
+}
+/* myPage E */
+
+
+
+/* Laptop small S */
+@media all and (min-width: 1024px) and (max-width: 1440px) {
+    /* section: my page */
+    .container-section.mypage {
+        width: 100%;
+        padding-right: 40px;
+    }
+}
+/* Laptop E */
+
+/* Tablet and Mobile S */
+@media all and (max-width: 1023px){
+    /* mypage: common */
+    .white_box {
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    /* section: my page */
+    .container-section.mypage {
+        width: calc(100% - 32px);
+        margin: 0 auto;
+        padding: 0;
+    }
+
+
+
+
+    /* tab: tab button area */
+    .mypage_tab_btn li {
+        width: 33%;
+    }
+
+
+
+    /* tab: contents area */
+    .mypage tr,
+    .mypage tbody th {
+        background-color: transparent;
+    }
+    .mypage tr {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        border-bottom: 10px solid #f7f9fb;
+    }
+    .mypage tr::before {
+        width: 100%;
+        background-color: #fff;
+        display: block;
+        content: '';
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        border-radius: 8px;
+        box-shadow: 0 10px 10px 0 rgba(0, 65, 162, 0.03);
+    }
+    .mypage tbody tr:first-child th:only-of-type {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .mypage tbody tr:last-child th:only-of-type {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .mypage tbody th,
+    .mypage tbody td {
+        position: relative;
+        z-index: 2;
+        padding: 16px 20px;
+    } 
+    .mypage tbody th {
+        width: auto;
+    }
+    .flex-col {
+        flex-direction: column;
+        position: relative;
+    }
+    .flex-col td{
+        padding-top: 0 !important;
+    }
+
+
+
+    /* table: accountInfo */
+    .promotion_alarm { 
+        position: absolute;
+        top: -25px;
+        right: 0;
+    }
+    .phone_auth {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .phone_auth input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+
+
+    /* table: memberInfo */
+    .member_link a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        border: solid 1px #e4e9f0;
+        font-size: 12px;
+        line-height: 1.42;
+        letter-spacing: -0.3px;
+        padding: 10px 0;
+        color: #111;
+        border-radius: 21px;
+    }
+    .member_link a span {
+        display: none;
+    }
+    .flex-col .member_link span {
+        position: absolute;
+        top: -32px;
+        right: 20px;
+    }
+
+
+
+    /* table: accountManage */
+    .mypage thead tr:first-child th:first-of-type {
+        width: 100% !important;
+    }
+    .mypage-manage thead tr:last-child {
+        display: none;
+    }
+    .mypage-manage_comment {
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 8px;
+        border: solid 1px #e4e9f0 !important;
+    }
+    .mypage-manage_comment::before {
+        background-color: transparent !important;
+    }
+    .mypage-manage tbody tr {
+        display: flex;
+        align-items: center;
+    }
+    .mypage-manage tbody tr td:first-of-type {
+        font-weight: bold;
+        text-align: left;
+    }
+    .mypage-manage .delete_btn {
+        border-radius: 0;
+        background-color: transparent;
+        width: 24px;
+        height: 24px;
+        border: none;
+        display: block;
+        padding: 0;
+        background-image: url(../images/mobile/icon_myPage-delete.svg);
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+    .mypage-manage .delete_btn::before {
+        display: none;
+    }
+}
+/* Tablet and Mobile E */
+
+/* Tablet S */
+@media all and (min-width: 768px) and (max-width: 1023px){
+}
+/* Tablet E */
+
+/* Mobile S */
+@media all and (max-width: 767px){
+}
+/* Mobile E */

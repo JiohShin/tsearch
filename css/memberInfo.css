@@ -1,0 +1,119 @@
+/* memberInfo S */
+/* memberInfo: common */
+.white_box-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.white_box-wrap .white_box {
+    width: 100%;
+    margin-right: 32px;
+    margin-bottom: 20px;
+}
+.white_box-wrap .white_box:last-child {
+    margin-right: 0;
+}
+
+
+/* section: member info */
+.member_price-top {
+    text-align: center;
+}
+.member_price {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 20px;
+    white-space: nowrap;
+}
+.member_price strong {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.19;
+    letter-spacing: -0.9px;
+    color: #111;
+    margin-right: 2px;
+}
+.member_price span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.45;
+    letter-spacing: -0.5px;
+    color: #111;
+}
+
+
+.member_price-bottom {
+    margin-top: 21px;
+    padding: 22px 30px;
+    border-radius: 8px;
+    background-color: #f7f9fb;
+    display: flex;
+    justify-content: space-between;
+}
+.member_price-bottom span {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.43;
+    letter-spacing: -0.35px;
+    color: #111;
+    display: flex;
+    align-items: flex-end;
+}
+.member_price-bottom span:last-of-type {
+    font-size: 12px;
+}
+.member_price-bottom em {
+    margin-right: 2px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.member_content {
+    margin-top: 20px;
+}
+.member_content p {
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: -0.35px;
+    color: #111;
+}
+/* memberInfo E */
+
+
+
+/* Laptop small S */
+@media all and (min-width: 1024px) and (max-width: 1440px) {
+    /* memberInfo: common */
+    .white_box-wrap .white_box {
+        margin-right: 20px;
+    }
+}
+/* Laptop E */
+
+/* Tablet and Mobile S */
+@media all and (max-width: 1023px) {
+    /* memberInfo: common */
+    .white_box-wrap {
+        flex-direction: column;
+    }
+    .white_box-wrap .white_box {
+        margin-right: 0;
+        margin-top: 0;
+    }
+    .white_box-wrap .white_box:first-child {
+        margin-top: 20px;
+    }
+}
+/* Tablet and Mobile E */
+
+/* Tablet S */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+}
+/* Tablet E */
+
+/* Mobile S */
+@media all and (max-width: 767px) {
+}
+/* Mobile E */

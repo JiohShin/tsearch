@@ -1,0 +1,117 @@
+/* Laptop small S */
+@media all and (max-width: 1440px) {
+    /* Common: date filter */
+    .title-date {
+        display: none;
+    }
+    .date_filter-wrap {
+        flex-direction: column;
+    }
+    .date_filter-wrap > div {
+        width: 100%;
+    }
+
+
+
+    /* date_filter-option */
+    .date_filter-option {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 0;
+        width: 100%;
+    }
+    .date_filter-option select {
+        width: 100%;
+        margin: 0 0 10px 0;
+        order: 1;
+        padding: 0 20px;
+        background-position: calc(100% - 10px) center;
+    }
+    .date_filter-btn {
+        order: 3;
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    .date_filter-btn button {
+        width: 24%;
+    }
+    .date_filter-date {
+        flex-direction: column;
+        order: 2;
+        margin-right: 0;
+        width: 100%;
+    }
+    .date_filter-date input[type="date"] {
+        min-width: 100%;
+        text-align: right;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .date_filter-date input[type="date"]:first-of-type::before {
+        content: '시작일';
+        display: block;
+        position: absolute;
+        left: 20px;
+    }
+    .date_filter-date input[type="date"]:last-of-type::before {
+        content: '종료일';
+        display: block;
+        position: absolute;
+        left: 20px;
+    }
+    .date_filter-date span {
+        display: none;
+    }
+    .date_filter-option .comment {
+        order: 4;
+        margin-left: 20px;
+        align-self: flex-start;
+    }
+}
+/* Laptop E */
+
+/* Tablet and Mobile S */
+@media all and (max-width: 1023px){
+    /* Common: section */
+    .section_wrap {
+        width: 100%;
+        left: 0;
+        top: 56px;
+    }
+    .container-section {
+        padding-right: 0;
+        padding: 0 16px;
+    }
+    .title-section {
+        display: none;
+    }
+
+
+    
+    /* Common: white_box */
+    .white_box {
+        padding: 24px 20px;
+    }
+
+
+
+    /* Common: btn style */
+    .btn_black {
+        font-size: 14px;
+        padding: 11px 0;
+    }
+}
+/* Tablet and Mobile E */
+
+/* Tablet S */
+@media all and (min-width: 768px) and (max-width: 1023px){
+
+}
+/* Tablet E */
+
+/* Mobile S */
+@media all and (max-width: 767px){
+
+}
+/* Mobile E */
